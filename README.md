@@ -10,7 +10,7 @@ npm start
 
 
 
-# 기여자
+# Team
 고병수 eclipse1228
 이학빈 Dayy9984
 허세진 Jelly1500

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+# Welcom DevDay 2023 ! 
 # Linker
 Project Name: Linker Knowledg-graph converter.
 and 

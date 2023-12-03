@@ -1,0 +1,555 @@
+Hi, I'm Bo with Free Code Camp. This network engineering course was developed by Brian
+
+Farrell, and instructor with Edmonds college. It will prepare you to configure, manage and
+
+troubleshoot computer networks. Also, the course is a great way to prepare for a comp
+
+Tia's network plus exam. So let's start. Hello, I'm Brian ferrill. And welcome to pace I t's
+
+session on the introduction to network devices, part one. Today we're going to be talking
+
+about layer one devices, layer two devices. And then we're going to conclude with layer
+
+three devices. There's a fair amount of information to cover. So let's go ahead and dive into
+
+this session. Of course, I'm going to begin with layer one devices. Well, before I start
+
+talking about the layer one devices, we need to talk about the open system interconnection
+
+model, the OSI model, it was developed as a way to help disparate computing systems
+
+to communicate with each other. The OSI reference model has seven layers. layer one is the physical
+
+layer, layer two is data link. layer three is network layer four is transport layer five
+
+is session. Layer six is presentation and layer seven is application. We're going to
+
+be discussing the bottom three layers layers One, two and three today. Now most devices
+
+do function at more than one layer of the OSI reference model. But when it comes time
+
+to determining where they fit into the model, you must first determine the highest level
+
+at which they operate, because that's where they fit into the OSI model. To do that, you
+
+must know what they do and how that relates to the OSI model. And with that, let's talk
+
+about analog modems. The word modem is actually derived from a contraction of modulator demodulator.
+
+modems were developed to take a digital signal coming from a digital node and convert it
+
+to an analog signal modulating the signal and placing it on a wire. In return, it would
+
+accept an analog signal from the wire and convert it demodulating the signal back to
+
+a digital signal that the node can understand. modems were developed to create a connection
+
+between network segments via the public switched telephone network using the plain old telephone
+
+system. Now modems provide for a single connection to a network. And they're only concerned about
+
+the wire in the wire resides on the physical layer layer one of the OSI model, it doesn't
+
+care where the signal comes from, it just does its job. Then there's the hub. A hub
+
+functions as a concentrator or repeater in that it doesn't care where the signal comes
+
+from, or where the signal is going. Kind of like the modem, it takes an electrical signal
+
+that arrives on a port and replicates that signal out all of its other ports. hub may
+
+have just a few ports, or it may have many ports in for a variety of reasons the hub
+
+is not very common anymore in the modern network. So now let's move on to layer two devices.
+
+The first layer two device that we're going to talk about is the switch. A switch utilizes
+
+an application specific integrated circuit chip and a basic chip. The ASIC chip has specific
+
+programming that allows the switch to learn when a device is on the network and which
+
+ports it is connected to via that devices layer two MAC address. That's what makes a
+
+switch a layer two device, a switch may have just a few ports or it may have many ports,
+
+kind of like the hub. And although a switches smarter than a hub, it can still be very simple,
+
+or it can be highly complex and programmable. A switch can only communicate with local network
+
+devices. another layer two device that we need to talk about our wireless access points.
+
+The whap whap is a specific type of network bridge that connects or bridges, wireless
+
+network segments with wired network segments. The most common type of web bridges and 802
+
+dot 11 wireless network segment with an 802 dot three Ethernet network segment just like
+
+a switch a wire Access Point will only communicate with local network devices. Now let's move
+
+on to layer three devices. And First up is the multi layer switch. A multi layer switch
+
+provides normal layer two network switching services, but it will also provide layer three
+
+or higher OSI model services. The most common multi layer switch is a layer three switch,
+
+it not only utilizes an async chip for switching, but that async chip is also programmed to
+
+handle routing functions. This allows the device to communicate and pass data to non
+
+local network devices. A multi layer switch is a highly programmable and complex network
+
+device. A multi layer switch may have just a few ports, or it may have a lot of ports.
+
+They're not very common in the small office home office network. Because they're really
+
+really expensive, you're more likely to find them in an enterprise local area network.
+
+Now let's move on to the router. A router is the most common network device for connecting
+
+different networks together, utilizing the OSI models layer three logical network information.
+
+That's what makes a router a layer three device. The router uses software programming for decision
+
+making, as compared to the switches use of an ASIC chip. The router uses this programming
+
+to keep track of different networks in what it considers to be the best possible route
+
+to reach those networks. A router can communicate with both local and non local network devices.
+
+In most cases, a router will have fewer ports, then a switch. Now that concludes this session
+
+on the introduction to network devices. Part One, we talked about layer one devices. We
+
+talked about layer two devices. And we concluded with a couple of layer three devices. Good
+
+day. I'm Brian ferrill. And welcome to pace eyeties session on introduction to network
+
+devices, part two. Today we're going to discuss some security network devices. And then we'll
+
+move on to some optimization and performance devices. And with that, let's go ahead and
+
+begin this session. And we will begin by talking about security devices. First up is the firewall.
+
+Now a firewall can be placed on routers or hosts in that it can be software based or
+
+it can be its own device. A firewall functions at multiple layers of the OSI model, specifically
+
+at layers 234 and seven. A firewall can block packets from entering or leaving the network.
+
+And it does this through one of two methods it can do it through stateless inspection,
+
+in which the firewall will examine every packet that enters or leaves the networks against
+
+a set of rules. Once the packet matches a rule, the rule is enforced in the specified
+
+action is taken, or it may use state full inspection. This is when a firewall will only
+
+examine the state of a connection between networks. Specifically, when a connection
+
+is made from an internal network to an external network. The firewall will not examine any
+
+packets returning from the external connection. It only cares about the state of the connection.
+
+As a general rule, external connections are not allowed to be initiated with the internal
+
+network. Now firewalls are the first line of defense in protecting the internal network
+
+from outside threats. You can consider the firewall to be the police force of the network.
+
+Then there is the intrusion detection system. The IDs and IDs is a passive system designed
+
+to identify when a network breach or attack against the network is occurring. They're
+
+usually designed to inform a network administrator when a breach or attack has occurred. And
+
+it does this through log files, text messages and are through email notification Friends,
+
+and IDs cannot prevent or stop a breach or attack on its own. The IBS receives a copy
+
+of all traffic and evaluates it against a set of standards. The standards that it used
+
+may be signature based. This is when it evaluates network traffic for known malware or attack
+
+signatures, or the standard may be anomaly based. This is where it evaluates network
+
+traffic for suspicious changes, or it may be policy base. This is where it evaluates
+
+network traffic against a specific declared security policy. An IDs may be deployed at
+
+the host level when it's deployed at the host level. It's called a host based intrusion
+
+detection system, we're hids more potent than the intrusion detection system is the intrusion
+
+prevention system. The IPS an IPS is an active system designed to stop a breach or attack
+
+from succeeding and damaging the network. They're usually designed to perform an action
+
+or set of actions to stop the malicious activity. They will also inform a network administrator
+
+through the use of log files, SMS, text messaging, and or through email notification. For an
+
+IPS to work. All traffic on the network segment needs to flow through the IPS as it enters
+
+and leaves the network segment. Like the IDS all of the traffic is evaluated against a
+
+set of standards and they're the same standards that are used on the IDs. The best placement
+
+on the network segment is between a router with a firewall hopefully, and the destination
+
+network segment. That way all the traffic flows through the IPS. IPS are programmed
+
+to make an active response to the situation, they can block the offending IP address, they
+
+can close down vulnerable interfaces, they can terminate network sessions, they can redirect
+
+the attack. Plus there are more actions that an IPS can take. The main thing is is that
+
+they are designed to be active to stop the breach or attack from succeeding and damaging
+
+your network. Let's move on to the virtual private network concentrator the VPN concentrator.
+
+Now this will allow for many secure VPN connections to a network. The concentrator will provide
+
+proper tunneling and encryption depending upon the type of VPN connection that is allowed
+
+to the network. Most concentrators can function at multiple layers of the OSI model. Specifically,
+
+they can operate at layer two, layer three and layer seven. Now outside of internet transactions,
+
+which use an SSL VPN connection at layer seven, most concentrators will function at the network
+
+layer or layer three of the OSI model, providing IPsec encryption through a secure tunnel.
+
+Now let's talk about optimization and performance devices. We will begin by talking about the
+
+load balancer. a load balancer may also be called a content switch or a content filter.
+
+It's a network appliance that is used to load balance between multiple hosts that contain
+
+the same data. This spreads out the workload for greater efficiency. They're commonly used
+
+to distribute the requests or workload to a server farm among the various servers in
+
+the farm, helping to ensure that no single server gets overloaded with work requests.
+
+Then there's the proxy server. A proxy server is an appliance that requests resources on
+
+behalf of a client machine. It's often used to retrieve resources from outside untrusted
+
+networks on behalf of the requesting client. It hides and protects that requesting client
+
+from the outside untrusted network. It can also be utilized to filter allowed content
+
+back into the trusted network. It can also increase network performance by caching or
+
+saving commonly requested web pages. Now that concludes this session on the introduction
+
+to network devices, part two We talked about some security devices that you may find on
+
+your network. And we concluded with optimization and performance devices that may also be present.
+
+Hello, I'm Brian ferrill. And welcome to pace I t's session on networking services and applications
+
+part one. Today I'm going to be discussing the basics of the virtual private network.
+
+And then I'm going to move on to protocols used by virtual private networks. Now, there's
+
+a whole lot of stuff to cover. So let's go ahead and begin this session. Of course, I'm
+
+going to begin by talking about the basics of the virtual private network. A virtual
+
+private network or VPN is used by remote hosts to access a private network through an encrypted
+
+tunnel through a public network. Once the VPN connection is made, the remote host is
+
+no longer considered remote is actually seen by the private network as being a local host.
+
+There are many advantages to that, but I'm not going to cover them right now. Even though
+
+the network traffic may pass through many different routes or systems, it's seen by
+
+both ends as being a direct connection. The use of the VPN can help to reduce networking
+
+costs. For organizations and business. The cost reduction is partially achieved, because
+
+the VPN doesn't require the use of a dedicated leased line to create that direct connection.
+
+There are several different types of VPNs there is the site to site VPN, which allows
+
+a remote sites network to connect to the main sites network and be seen as a local network
+
+segment. VPN concentrators on both ends of the VPN will manage that connection. Then
+
+there's the remote access VPN, which is also called a host to site VPN. It allows select
+
+remote users to connect to the local network. A VPN concentrator on the local network will
+
+manage the connection coming in from the remote users. The remote system making the connection
+
+uses special software called VPN client software to make that connection. The third type of
+
+VPN is the host of host VPN, which is often called an SSL VPN. It allows us secure connection
+
+between two systems without the use of VPN client software. A VPN concentrator on the
+
+local network manages the connection. The host seeking to connect uses a web browser
+
+that supports the correct encryption technology, which is either SSL or more likely TLS. To
+
+make the connection to the VPN concentrator. It's time to discuss some protocols used by
+
+the virtual private network. The big protocol for VPN is called Internet Protocol security
+
+IPsec, which isn't actually a protocol in itself, but a whole set of protocols. IP sec
+
+works at layer three of the OSI model or above. It's the most common suite of protocols used
+
+to secure a VPN connection. IP sec can be used with the authentication header protocol
+
+or the H protocol. h only offers authentication services, but no encryption. So it authentic
+
+Kate's the user but there is no encryption of the session, or ipset can be used with
+
+encapsulating security payload protocol or the ESP protocol. ESP both authenticates and
+
+encrypts the packets. It is the most popular method of securing a VPN connection, both
+
+H and ESP will operate in one of two modes. The first mode is transparent mode, that is
+
+between two devices as in a host to host VPN, or they can be used in tunnel mode, which
+
+is between two endpoints as in a site to site VPN, IP sec implements Internet Security Association
+
+and key management eisah camp by default eisah camp provides a method for transferring security
+
+key and authentication data between systems outside of the security key generating process.
+
+It is a much more secure process. Then we have generic routing encapsulation. gra G
+
+is a tunneling protocol that is capable of encapsulating a wide variety of other nuts
+
+layer protocols, it's often used to create a sub tunnel within an IP sec connection.
+
+Why is that? Well, IP sec will only transmit unicast packets, that's one to one communication.
+
+In many cases, there is a need to transmit multicast, which is one to some communication,
+
+or broadcast, which is one to many communication packets across an IP set connection. By using
+
+GRP we can get that accomplished. Then there's Point to Point tunneling protocol pptp. This
+
+is an older VPN technology that supports dial up VPN connections. on its own, it lacked
+
+native security features, so it wasn't very secure. But Microsoft's implementation included
+
+additional security by adding gr E. Two point to point tunneling protocol. Transport Layer
+
+Security is another common VPN protocol. TLS is a cryptographic protocol used to create
+
+a secure encrypted connection between two end devices or applications. It uses asymmetrical
+
+cryptography to authenticate endpoints and then negotiates a symmetrical security key,
+
+which is used to encrypt the session TLS has largely replaced its cousin, secure socket
+
+layer protocol, and TLS works at layer five and above of the OSI model. Its most common
+
+usage is in creating a secure encrypted internet session or SSL VPN. All modern web browsers
+
+support TLS now I just mentioned secure socket layer or SSL. SSL is an older cryptographic
+
+protocol that is very similar to TLS. The most common use is in internet transactions.
+
+Why? Because all modern web browsers support SSL. But due to issues with earlier versions
+
+of the protocol, it has largely been replaced by TLS. SSL version 3.3 has been developed
+
+to address the weaknesses of earlier versions. But it may never again catch up to its cousin,
+
+the TLS protocol. Now that concludes this session on networking services and applications
+
+part one, I talked about the basics of the virtual private network. And then I talked
+
+about the protocols used by the VPN network. Good day, I'm Brian ferrill. And welcome to
+
+pace I t's session on networking services and applications part two. Today we're going
+
+to be discussing network access services. And then we're going to move on to other services
+
+and applications. As always, there's a fair amount of ground to cover. So let's go ahead
+
+and dive into this session. I will begin with network access services. The first network
+
+access service that I'm going to discuss is actually a piece of hardware, the network
+
+interface controller or Nic, it can also be called the network interface card. The Nic
+
+is how a device connects to a network. The network interface controller works at two
+
+layers of the OSI model at layer two which is the data link layer. It provides the functional
+
+means of network communication by determining which networking protocols will be used as
+
+in a Nic that will provide Ethernet communication or Nic that will provide Point to Point protocol.
+
+It also provides the local network node address through its burned in physical media access
+
+control address at layer one the physical layer, the network interface controller determines
+
+how the network data traffic will be converted a bit at a time into an electrical signal
+
+that can traverse the network media being used, ie it provides the connection to the
+
+network. Most modern computers come with at least one built in Ethernet Nic routers and
+
+other network devices may use separate modules that can be inserted into the device to provide
+
+the proper network interface controller for the type of media they're connecting to in
+
+the networking protocols that are being used. Another network access service is radius remote,
+
+authentic dial in user service radius is a remote access service that is used to authenticate
+
+remote users and grant them access to authorized network resources. It is a popular triple
+
+A protocol that's authentication, authorization and accounting protocol. It's used to help
+
+ensure that only authenticated end users are using the network resources they are authorized
+
+to use. The accounting services of radius are very robust. The only drawback to radius
+
+is only the requesters the end users password is encrypted. Everything else gets sent in
+
+the clear terminal access controller access control system plus or TAC x plus terminal
+
+access controller access control system plus point what a mouthful, it sure is easier to
+
+say. TAC x plus is a remote access service that is used with authenticate remote devices
+
+and grant them access to authorized network resources. It is also a popular triple A protocol
+
+used to help ensure that only authenticated remote network devices are using the network
+
+resources that they are authorized to use. With TAC x plus the accounting features are
+
+not as robust as those found in radius. But all network transmissions between devices
+
+are encrypted with TAC x plus, let's move on to other services and applications. First
+
+up is our AAS Remote Access Services. Now, RS is not a protocol, but a roadmap. Rs is
+
+a description of the combination of software and hardware required for remote access connection.
+
+A client requests access from an RS server, which either grants or rejects that access.
+
+Then we have web services, creating a means of cross communication. Web Services provides
+
+the means for communication between software packages or disparate platforms. It's usually
+
+achieved by translating the communication into an XML format, or Extensible Markup Language
+
+format. It is becoming more popular as systems diverged. Last up is unified voice services.
+
+This is creating a better voice communication system. It's a description of the combination
+
+of software and hardware required to integrate voice communication channels into a network
+
+as in Voice over IP. That concludes this session on networking services and applications. Part
+
+Two. I began by talking about network access services. And I concluded with other services
+
+and applications. Hello, I'm Brian ferrill. And welcome to pace eyeties session on DHCP
+
+in the network. Today, we're going to be talking about static versus dynamic IP addressing.
+
+Then we're going to move on to how DHCP works. And then we will conclude with components
+
+and processes of DHCP. And with that, let's go ahead and begin this session. And of course,
+
+we begin by talking about static versus dynamic IP addresses. So how does a computer know
+
+what its IP configuration is? Well, more than likely a computer received its IP configuration
+
+from a Dynamic Host Configuration Protocol server. Not only did the server give the PC
+
+an IP address, but it also told the PC where the default gateway was, and more than likely
+
+how to find a DNS server, a computer will receive its IP configuration in one of two
+
+ways. Either statically, which means manually set or dynamically, which means through a
+
+service like DHCP static IP address assignment works fine for very small and stable networks,
+
+but quickly becomes unwieldly and error prone as the network grows and more nodes come on
+
+to the network. So let's talk a little bit more about static IP addresses. The administrator
+
+assigned An IP number and subnet mask to each host in the network, whether it be a PC, router
+
+or some other piece of electronic equipment. Each network interface that is going to be
+
+available to connect to the network requires this information. The administrator also assigns
+
+a default gateway location and DNS server location to each host in the network. Now
+
+these settings are required if access to outside networks is going to be allowed, that would
+
+be through the default gateway. And if human friendly naming conventions are going to be
+
+allowed, and that way, you can more easily find network resources, and that would be
+
+through a DNS server. Now each time a change is made, as in a new default gateway is established,
+
+each IP configuration on each host must be updated. That's why it becomes rather cumbersome
+
+and complicated as the network grows. Now with dynamic IP addressing the administrator
+
+configures, a DHCP server to handle the assignment process, which actually automates the process
+
+and eases management. The DHCP server listens on a specific port for IP information requests.
+
+Once it receives a request, the DHCP server responds with the required information. Now
+
+let's move on to how DHCP works. Here is the typical DHCP process. Upon boot up a PC that
+
+is configured to request an IP configuration sends a DHCP discovery packet. Now the discovery
+
+packet is sent to the broadcast address 255255255255 on UDP port 67. The DHCP server is listening
+
+to that port. It's listening for that discovery packet. When the DHCP server receives the
+
+discovery packet, it responds with an offer packet, basically saying hey, I'm here to
+
+help. Now the offer packet is sent back to the MAC address of the computer requesting
+
+help, and it's sent on port 68. Once the computer receives that offer packet from the DHCP server,
+
+if it's going to use that DHCP server, it returns a request packet. That means it's
+
+requesting the proper IP configuration from that specific DHCP server. Once the DHCP server
+
+receives the request packet, it sends back an acknowledgment packet. Now this acknowledgement
+
+packet contains all of the required IP configuration information. Once the PC receives the acknowledgment
+
+packet, the PC changes its IP configuration to reflect the information that it received
+
+from the DHCP server. And that's the typical DHCP process in a nutshell. Now let's talk
+
+about components and the process of DHCP. We're going to begin by talking about the
+
+port's use. Now, I already mentioned this once, but I'm going to mention it again because
+
+you need to know this. The PC sends its discovery packet out on the broadcast address 255255255255
+
+on port 67. That's UDP port 67. When the DHCP server responds, it responds to the PCs MAC
+
+address, Media Access Control address on UDP port 68. That's important. Remember the PC
+
+uses UDP port 67. The DHCP server responds on UDP port 68. Then there's the address scope.
+
+The address scope is the IP address range that the administrator configures on the DHCP
+
+server. It is the range of addresses that the DHCP server can hand out to individual
+
+

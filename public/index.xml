@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title></title>
+      <link>https://quartz.jzhao.xyz</link>
+      <description>Last 10 notes on </description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>DHCP in the Network</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/DHCP-in-the-Network</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/DHCP-in-the-Network</guid>
+    <description> DHCP automates the assignment of IP addresses and network configuration details to devices on a network. Dynamic IP addressing via DHCP is scalable and less error-prone than static IP addressing, especially as a network grows.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>Optimization and Performance Devices</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Optimization-and-Performance-Devices</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Optimization-and-Performance-Devices</guid>
+    <description> Load balancers ensure no single server in a server farm is overwhelmed by evenly distributing requests. Proxy servers serve as intermediaries for clients to access external resources, also providing cache functions for improved network performance.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>VPN Concentrator</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/VPN-Concentrator</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/VPN-Concentrator</guid>
+    <description> A device that manages the security and data tunneling for multiple VPN connections, typically functioning at layers two and three, and sometimes at layer seven for SSL VPNs.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>Security Devices</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Security-Devices</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Security-Devices</guid>
+    <description> Firewalls secure networks by enforcing rules and managing packet traffic across different OSI layers. Intrusion Detection Systems (IDS) detect and alert network administrators of security breaches.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>Layer Three Devices</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Layer-Three-Devices</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Layer-Three-Devices</guid>
+    <description> Multi-layer switches provide both switching and routing functions, facilitating data transfer between different network devices. Routers connect diverse networks and manage the best routes for data packets based on layer three network information.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>Layer Two Devices</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Layer-Two-Devices</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Layer-Two-Devices</guid>
+    <description> Switches learn attached devices’ locations via MAC addresses and facilitate communication between local network devices. Wireless access points connect wireless network segments to wired ones.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>Layer One Devices</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Layer-One-Devices</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Layer-One-Devices</guid>
+    <description> Modems modulate and demodulate analog signals for network connections over telephone lines. Hubs replicate incoming network signals to all ports, acting as signal repeaters.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>OSI Model</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/OSI-Model</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/OSI-Model</guid>
+    <description> A framework used to understand how different network protocols interact and function across seven defined layers. Layer one is dedicated to the physical connections in a network.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>Instructor</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Instructor</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Instructor</guid>
+    <description>Brian Farrell § Brian Farrell is the instructor from Edmonds College responsible for developing this network engineering course.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item><item>
+    <title>Network Engineering Course</title>
+    <link>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Network-Engineering-Course</link>
+    <guid>https://quartz.jzhao.xyz/Computer-Networking-Course---Network-Engineering-%5BCompTIA-Network+-Exam-Prep%5D---%EC%98%81%EC%96%B4/Network-Engineering-Course</guid>
+    <description>Introduction to Network Engineering § This course discusses configuring, managing, and troubleshooting computer networks, and helps prepare for CompTIA’s Network+ exam.</description>
+    <pubDate>Thu, 30 Nov 2023 11:21:57 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

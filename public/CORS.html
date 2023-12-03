@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html><head><title>CORS</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="CORS"/><meta property="og:description" content="CORS는 무엇인가요? § 브라우저에서는 보안적인 이유로 cross-origin HTTP 요청들을 제한합니다. 그래서 cross-origin 요청을 하려면 서버의 동의가 필요합니다. 만약 서버가 동의한다면 브라우저에서는 요청을 허락하고, 동의하지 않는다면 브라우저에서 거절합니다."/><meta property="og:image" content="https://quartz.jzhao.xyz/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="CORS는 무엇인가요? § 브라우저에서는 보안적인 이유로 cross-origin HTTP 요청들을 제한합니다. 그래서 cross-origin 요청을 하려면 서버의 동의가 필요합니다. 만약 서버가 동의한다면 브라우저에서는 요청을 허락하고, 동의하지 않는다면 브라우저에서 거절합니다."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="./index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="./prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`./static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="CORS"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="article-title ">CORS</h1><h1 class="page-title "><a href="."></a></h1><div class="spacer mobile-only"></div><div class="search "><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="explorer "><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[{&quot;path&quot;:&quot;Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep] - 영어&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;HTTP문서&quot;,&quot;collapsed&quot;:true}]"><h1>Explorer</h1><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="/Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep] - 영어"><button class="folder-button"><p class="folder-title">Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep] - 영어</p></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="/Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep] - 영어"><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/DHCP-in-the-Network" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/DHCP-in-the-Network">DHCP in the Network</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Instructor" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Instructor">Instructor</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Layer-One-Devices" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Layer-One-Devices">Layer One Devices</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Layer-Three-Devices" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Layer-Three-Devices">Layer Three Devices</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Layer-Two-Devices" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Layer-Two-Devices">Layer Two Devices</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Network-Engineering-Course" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Network-Engineering-Course">Network Engineering Course</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Optimization-and-Performance-Devices" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Optimization-and-Performance-Devices">Optimization and Performance Devices</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/OSI-Model" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/OSI-Model">OSI Model</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Security-Devices" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/Security-Devices">Security Devices</a></li></li><li><li><a href="./Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/VPN-Concentrator" data-for="Computer-Networking-Course---Network-Engineering-[CompTIA-Network+-Exam-Prep]---영어/VPN-Concentrator">VPN Concentrator</a></li></li></ul></div></div></li><li><div><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="/HTTP문서"><button class="folder-button"><p class="folder-title">HTTP문서</p></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="/HTTP문서"><li><li><a href="./HTTP문서/로드-밸런서" data-for="HTTP문서/로드-밸런서">로드 밸런서</a></li></li><li><li><a href="./HTTP문서/리버스-프록시-캐시" data-for="HTTP문서/리버스-프록시-캐시">리버스 프록시 캐시</a></li></li><li><li><a href="./HTTP문서/웹-서버" data-for="HTTP문서/웹-서버">웹 서버</a></li></li><li><li><a href="./HTTP문서/Cache-Control-헤더" data-for="HTTP문서/Cache-Control-헤더">Cache-Control 헤더</a></li></li><li><li><a href="./HTTP문서/CDN" data-for="HTTP문서/CDN">CDN</a></li></li><li><li><a href="./HTTP문서/ETag" data-for="HTTP문서/ETag">ETag</a></li></li><li><li><a href="./HTTP문서/HTTP-캐싱" data-for="HTTP문서/HTTP-캐싱">HTTP 캐싱</a></li></li><li><li><a href="./HTTP문서/Last-Modified" data-for="HTTP문서/Last-Modified">Last-Modified</a></li></li><li><li><a href="./HTTP문서/Vary-헤더" data-for="HTTP문서/Vary-헤더">Vary 헤더</a></li></li></ul></div></div></li><li><li><a href="./관계형-데이터-베이스" data-for="관계형-데이터-베이스">관계형 데이터 베이스</a></li></li><li><li><a href="./데이터-요구사항" data-for="데이터-요구사항">데이터 요구사항</a></li></li><li><li><a href="./로그인-기능" data-for="로그인-기능">로그인 기능</a></li></li><li><li><a href="./세션" data-for="세션">세션</a></li></li><li><li><a href="./유저" data-for="유저">유저</a></li></li><li><li><a href="./CORS" data-for="CORS">CORS</a></li></li><li><li><a href="./E-R-모델" data-for="E-R-모델">E-R 모델</a></li></li><li><li><a href="./JWT" data-for="JWT">JWT</a></li></li></ul></div></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container " aria-label="breadcrumbs"><div class="breadcrumb-element"><a href=".">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>CORS</a></div></nav><p class="content-meta ">Nov 30, 2023, 7 min read</p></div></div><article class="popover-hint"><h2 id="cors는-무엇인가요">CORS는 무엇인가요?<a aria-hidden="true" tabindex="-1" href="#cors는-무엇인가요" class="internal alias"> §</a></h2>
+<p>브라우저에서는 보안적인 이유로 <code>cross-origin</code> HTTP 요청들을 제한합니다. 그래서 <code>cross-origin</code> 요청을 하려면 서버의 동의가 필요합니다. 만약 서버가 동의한다면 브라우저에서는 요청을 허락하고, 동의하지 않는다면 브라우저에서 거절합니다.</p>
+<p>이러한 허락을 구하고 거절하는 메커니즘을 HTTP-header를 이용해서 가능한데, 이를 CORS(Cross-Origin Resource Sharing)라고 부릅니다.</p>
+<p>그래서 브라우저에서 <code>cross-origin</code> 요청을 안전하게 할 수 있도록 하는 메커니즘입니다.</p>
+<h3 id="cross-origin">cross-origin<a aria-hidden="true" tabindex="-1" href="#cross-origin" class="internal alias"> §</a></h3>
+<p><code>cross-origin</code>이란 다음 중 한 가지라도 다른 경우를 말합니다.</p>
+<ol>
+<li>프로토콜 - http와 https는 프로토콜이 다르다.</li>
+<li>도메인 - domain.com과 other-domain.com은 다르다.</li>
+<li>포트 번호 - 8080포트와 3000포트는 다르다.</li>
+</ol>
+<h2 id="cors는-왜-필요한가요">CORS는 왜 필요한가요?<a aria-hidden="true" tabindex="-1" href="#cors는-왜-필요한가요" class="internal alias"> §</a></h2>
+<p>CORS가 없이 모든 곳에서 데이터를 요청할 수 있게 되면, 다른 사이트에서 원래 사이트를 흉내낼 수 있게 됩니다. 예를 들어서 기존 사이트와 완전히 동일하게 동작하도록 하여 사용자가 로그인을 하도록 만들고, 로그인했던 세션을 탈취하여 악의적으로 정보를 추출하거나 다른 사람의 정보를 입력하는 등 공격을 할 수 있습니다. 이렇나 공격을 할 수 없도록 브라우저에서 보호하고, 필요한 경우 에만 서버와 협의하여 요청할 수 있도록 하기 위해서 필요합니다.</p>
+<h2 id="cors는-어떻게-동작하나요">CORS는 어떻게 동작하나요?<a aria-hidden="true" tabindex="-1" href="#cors는-어떻게-동작하나요" class="internal alias"> §</a></h2>
+<h3 id="simple-requests인-경우">Simple requests인 경우<a aria-hidden="true" tabindex="-1" href="#simple-requests인-경우" class="internal alias"> §</a></h3>
+<ol>
+<li>서버로 요청을 합니다.</li>
+<li>서버의 응답이 왔을 때 브라우저가 요청한 <code>Origin</code>과 응답한 헤더 <code>Access-Control-Request-Headers</code>의 값을 비교하여 유효한 요청이라면 리소스를 응답합니다. 만약 유효하지 않은 요청이라면 브라우저에서 이를 막고 에러가 발생합니다.</li>
+</ol>
+<h4 id="simple-requests란">Simple requests란?<a aria-hidden="true" tabindex="-1" href="#simple-requests란" class="internal alias"> §</a></h4>
+<p>HTTP method가 다음 중 하나이면서</p>
+<ul>
+<li>GET</li>
+<li>HEAD</li>
+<li>POST</li>
+</ul>
+<p>자동으로 설정되는 헤더는 제외하고, 설정할 수 있는 다음 헤더들만 변경하면서</p>
+<ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+</ul>
+<p><code>Content-Type</code>이 다음과 같은 경우</p>
+<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>multipart/form-data</li>
+<li>text/plain</li>
+</ul>
+<p>Simple requqets라고 부릅니다. 이 요청은 추가적으로 확인하지 않고 바로 본 요청을 보냅니다.</p>
+<h3 id="preflight-요청일-경우">preflight 요청일 경우<a aria-hidden="true" tabindex="-1" href="#preflight-요청일-경우" class="internal alias"> §</a></h3>
+<ol>
+<li><code>Origin</code>헤더에 현재 요청하는 origin과, <code>Access-Control-Request-Method</code>헤더에 요청하는 HTTP method와 <code>Access-Control-Request-Headers</code>요청 시 사용할 헤더를 <code>OPTIONS</code> 메서드로 서버로 요청합니다. 이때 내용물은 없이 헤더만 전송합니다.</li>
+<li>브라우저가 서버에서 응답한 헤더를 보고 유효한 요청인지 확인합니다. 만약 유효하지 않은 요청이라면 요청은 중단되고 에러가 발생합니다. 만약 유효한 요청이라면 원래 요청으로 보내려던 요청을 다시 요청하여 리소스를 응답받습니다.</li>
+</ol>
+<h4 id="preflight-요청이란">preflight 요청이란?<a aria-hidden="true" tabindex="-1" href="#preflight-요청이란" class="internal alias"> §</a></h4>
+<p>Simple requests가 아닌 <code>cross-origin</code>요청은 모두 preflight 요청을 하게 되는데, 실제 요청을 보내는 것이 안전한지 확인하기 위해 먼저 OPTIONS 메서드를 사용하여 <code>cross-origin</code> HTTP 요청을 보냅니다. 이렇게 하는 이유는 사용자 데이터에 영향을 미칠 수 있는 요청이므로 사전에 확인 후 본 요청을 보냅니다.</p>
+<h2 id="요청-헤더-목록">요청 헤더 목록<a aria-hidden="true" tabindex="-1" href="#요청-헤더-목록" class="internal alias"> §</a></h2>
+<ul>
+<li>Origin</li>
+<li>Access-Control-Request-Method
+<ul>
+<li><code>preflight</code> 요청을 할 때 실제 요청에서 어떤 메서드를 사용할 것인지 서버에게 알리기 위해 사용됩니다.</li>
+</ul>
+</li>
+<li>Access-Control-Request-Headers
+<ul>
+<li><code>preflight</code>요청을 할 때 실제 요청에서 어떤 header를 사용할 것인지 서버에게 알리기 위해 사용됩니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="응답-헤더-목록">응답 헤더 목록<a aria-hidden="true" tabindex="-1" href="#응답-헤더-목록" class="internal alias"> §</a></h2>
+<ul>
+<li>Access-Control-Allow-Origin
+<ul>
+<li>브라우저가 해당 origin이 자원에 접근할 수 있도록 허용합니다. 혹은 <code>*</code>은 credentials이 없는 요청에 한해서 모든 origin에서 접근이 가능하도록 허용합니다.</li>
+</ul>
+</li>
+<li>Access-Control-Expose-Headers
+<ul>
+<li>브라우저가 액세스할 수 있는 서버 화이트리스트 헤더를 허용합니다.</li>
+</ul>
+</li>
+<li>Access-Control-Max-Age
+<ul>
+<li>얼마나 오랫동안 <code>preflight</code>요청이 캐싱 될 수 있는지를 나타낸다.</li>
+</ul>
+</li>
+<li>Access-Control-Allow-Credentials
+<ul>
+<li><code>Credentials</code>가 true 일 때 요청에 대한 응답이 노출될 수 있는지를 나타냅니다.</li>
+<li><code>preflight</code>요청에 대한 응답의 일부로 사용되는 경우 실제 자격 증명을 사용하여 실제 요청을 수행할 수 있는지를 나타냅니다.</li>
+<li>간단한 GET 요청은 <code>preflight</code>되지 않으므로 자격 증명이 있는 리소스를 요청하면 헤더가 리소스와 함께 반환되지 않으면 브라우저에서 응답을 무시하고 웹 콘텐츠로 반환하지 않습니다.</li>
+</ul>
+</li>
+<li>Access-Control-Allow-Methods
+<ul>
+<li>preflight`요청에 대한 대한 응답으로 허용되는 메서드들을 나타냅니다.</li>
+</ul>
+</li>
+<li>Access-Control-Allow-Headers
+<ul>
+<li><code>preflight</code>요청에 대한 대한 응답으로 실제 요청 시 사용할 수 있는 HTTP 헤더를 나타냅니다.</li>
+</ul>
+</li>
+</ul></article></div><div class="right sidebar"><div class="graph "><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[]}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[]}"></div></div></div><div class="toc desktop-only"><button type="button" id="toc" class><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#cors는-무엇인가요" data-for="cors는-무엇인가요">CORS는 무엇인가요?</a></li><li class="depth-1"><a href="#cross-origin" data-for="cross-origin">cross-origin</a></li><li class="depth-0"><a href="#cors는-왜-필요한가요" data-for="cors는-왜-필요한가요">CORS는 왜 필요한가요?</a></li><li class="depth-0"><a href="#cors는-어떻게-동작하나요" data-for="cors는-어떻게-동작하나요">CORS는 어떻게 동작하나요?</a></li><li class="depth-1"><a href="#simple-requests인-경우" data-for="simple-requests인-경우">Simple requests인 경우</a></li><li class="depth-1"><a href="#preflight-요청일-경우" data-for="preflight-요청일-경우">preflight 요청일 경우</a></li><li class="depth-0"><a href="#요청-헤더-목록" data-for="요청-헤더-목록">요청 헤더 목록</a></li><li class="depth-0"><a href="#응답-헤더-목록" data-for="응답-헤더-목록">응답 헤더 목록</a></li></ul></div></div></div></div><footer class><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.1.1</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="./postscript.js" type="module"></script></html>

@@ -6,7 +6,7 @@ and
 ```
 npm start
 ```
-##GPT4 API key
+## GPT4 API key
 ```
 server.cjs 와 upload/script.js 에 본인의 API KEY를 입력해주세요
 ```

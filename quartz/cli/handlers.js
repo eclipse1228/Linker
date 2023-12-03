@@ -309,118 +309,83 @@ export async function handleBuild(argv) {
   }
 
   if (argv.serve) {
-    const connections = []
-    const clientRefresh = () => connections.forEach((conn) => conn.send("rebuild"))
-
+    const connections = [];
+    const clientRefresh = () => connections.forEach((conn) => conn.send("rebuild"));
+  
     if (argv.baseDir !== "" && !argv.baseDir.startsWith("/")) {
-      argv.baseDir = "/" + argv.baseDir
+      argv.baseDir = "/" + argv.baseDir;
     }
-
-    await build(clientRefresh)
+  
+    await build(clientRefresh);
+  
     const server = http.createServer(async (req, res) => {
-      if (argv.baseDir && !req.url?.startsWith(argv.baseDir)) {
-        console.log(
-          chalk.red(
-            `[404] ${req.url} (warning: link outside of site, this is likely a Quartz bug)`,
-          ),
-        )
-        res.writeHead(404)
-        res.end()
-        return
+      // '/user' 경로 및 그 하위 경로 처리
+      if (req.url?.startsWith(argv.baseDir)) {
+        // strip baseDir prefix
+        req.url = req.url.slice(argv.baseDir.length);
+  
+        const serve = async () => {
+          const release = await buildMutex.acquire();
+          await serveHandler(req, res, {
+            public: argv.output,
+            directoryListing: false,
+            headers: [
+              {
+                source: "**/*.html",
+                headers: [{ key: "Content-Disposition", value: "inline" }],
+              },
+            ],
+          });
+          const status = res.statusCode;
+          const statusString =
+            status >= 200 && status < 300 ? chalk.green(`[${status}]`) : chalk.red(`[${status}]`);
+          console.log(statusString + chalk.grey(` ${req.url}`));
+          release();
+        };
+  
+        return serve();
       }
-
-      // strip baseDir prefix
-      req.url = req.url?.slice(argv.baseDir.length)
-
-      const serve = async () => {
-        const release = await buildMutex.acquire()
-        await serveHandler(req, res, {
-          public: argv.output,
-          directoryListing: false,
-          headers: [
-            {
-              source: "**/*.html",
-              headers: [{ key: "Content-Disposition", value: "inline" }],
-            },
-          ],
-        })
-        const status = res.statusCode
-        const statusString =
-          status >= 200 && status < 300 ? chalk.green(`[${status}]`) : chalk.red(`[${status}]`)
-        console.log(statusString + chalk.grey(` ${argv.baseDir}${req.url}`))
-        release()
-      }
-
-      const redirect = (newFp) => {
-        newFp = argv.baseDir + newFp
-        res.writeHead(302, {
-          Location: newFp,
-        })
-        console.log(chalk.yellow("[302]") + chalk.grey(` ${argv.baseDir}${req.url} -> ${newFp}`))
-        res.end()
-      }
-
-      let fp = req.url?.split("?")[0] ?? "/"
-
-      // handle redirects
-      if (fp.endsWith("/")) {
-        // /trailing/
-        // does /trailing/index.html exist? if so, serve it
-        const indexFp = path.posix.join(fp, "index.html")
-        if (fs.existsSync(path.posix.join(argv.output, indexFp))) {
-          req.url = fp
-          return serve()
-        }
-
-        // does /trailing.html exist? if so, redirect to /trailing
-        let base = fp.slice(0, -1)
-        if (path.extname(base) === "") {
-          base += ".html"
-        }
-        if (fs.existsSync(path.posix.join(argv.output, base))) {
-          return redirect(fp.slice(0, -1))
-        }
+  
+      // 루트 경로('/')에 대한 요청 처리
+      if (req.url === '/') {
+        // upload.html 파일 경로
+        const filePath = 'upload.html';
+        fs.readFile(filePath, (err, data) => {
+          if (err) {
+            res.writeHead(500);
+            res.end('Server Error: Cannot load upload.html');
+          } else {
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.end(data);
+          }
+        });
       } else {
-        // /regular
-        // does /regular.html exist? if so, serve it
-        let base = fp
-        if (path.extname(base) === "") {
-          base += ".html"
-        }
-        if (fs.existsSync(path.posix.join(argv.output, base))) {
-          req.url = fp
-          return serve()
-        }
-
-        // does /regular/index.html exist? if so, redirect to /regular/
-        let indexFp = path.posix.join(fp, "index.html")
-        if (fs.existsSync(path.posix.join(argv.output, indexFp))) {
-          return redirect(fp + "/")
-        }
+        // 다른 경로에 대해 404 반환
+        res.writeHead(404);
+        res.end();
       }
-
-      return serve()
-    })
-    server.listen(argv.port)
-    const wss = new WebSocketServer({ port: argv.wsPort })
-    wss.on("connection", (ws) => connections.push(ws))
+    });
+  
+    server.listen(argv.port);
+    const wss = new WebSocketServer({ port: argv.wsPort });
+    wss.on("connection", (ws) => connections.push(ws));
     console.log(
       chalk.cyan(
         `Started a Quartz server listening at http://localhost:${argv.port}${argv.baseDir}`,
       ),
-    )
-    console.log("hint: exit with ctrl+c")
+    );
+    console.log("hint: exit with ctrl+c");
     chokidar
       .watch(["**/*.ts", "**/*.tsx", "**/*.scss", "package.json"], {
         ignoreInitial: true,
       })
       .on("all", async () => {
-        build(clientRefresh)
-      })
+        build(clientRefresh);
+      });
   } else {
-    await build(() => {})
-    ctx.dispose()
-  }
+    await build(() => {});
+    ctx.dispose();
+  }  
 }
 
 /**

@@ -1,0 +1,211 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.user {
+    margin-left: auto; 
+    margin-right: 32px; 
+    display: flex;
+}
+
+#inputLine {
+    border: 3px solid rgb(213, 213, 213); 
+    border-radius:6px; 
+    height: 40px; 
+    align-items: center;
+    display: flex; 
+    background-color:white;
+}
+
+#uploadButton {
+    height: 40px; width: 40px; padding:0px; background-color: white; border: 0px; margin-right: 10px;
+}
+
+#userName {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-right: 24px; 
+    margin-top: 8px; 
+    color: black;
+}
+
+#loadingIndicator {
+    height: 55px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading {
+    height:100%;
+    width: 100%;
+    background-color: gray;
+    border-radius: 4px;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.round-image {
+    border-radius: 50%;
+    /* 선택 사항: 완벽한 원을 보장하려면 고정된 너비와 높이를 설정합니다. */
+    width: 50px;
+    height: 50px;
+  }
+
+.whitespace-pre-wrap{
+font-size:28px;
+}
+
+
+.iframe-container{
+    border: 0px;
+}
+
+#chatMessages {
+    overflow: auto;
+    background-color: #ffffff;
+    height: 760px;
+    border-radius: 10px;
+}
+
+.header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.iframe-container {
+    flex: 1;
+    height: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.iframe-container:first-child {
+    flex: 4;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.bottom-6 {
+    bottom: 1.5rem; /* Assuming 1rem = 16px */
+}
+
+.p-2 {
+    padding: 0.5rem; /* Assuming 1rem = 16px */
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem; /* Assuming 1rem = 16px */
+}
+
+.text-purple {
+    color: #b180b4;
+}
+
+.rounded {
+    border-radius: 0.25rem; /* Assuming 1rem = 16px */
+}
+
+.bg-purple {
+    background-color: #8a188a;
+}
+
+.border-none {
+    border: 0px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.night{
+    background-color: black;
+    color: white;
+}
+
+.user-message, .assistant-message {
+    white-space: pre-wrap;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.message {
+    white-space: pre-wrap;
+}
+
+.user-message {
+    background-color: #f0f0f0;
+    color: black;
+}
+.assistant-message {
+    background-color: #e0e0ff;
+    color: purple;
+}
+
+
+
+.user { color: blue; }
+.bot { color: green; }

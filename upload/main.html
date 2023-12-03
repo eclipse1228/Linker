@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Markdown Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header style="border-bottom: 1px solid rgb(213, 213, 213);">
+        <div class="header" style="font-family:Andale Mono, monospace; ">
+            <h1 style="margin-left: 32px; font-weight: bold;">Linker</h1>
+            <div class="user">
+                <span id="userName">James</span>
+                <img src="userImg.png" class="round-image"/>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="iframe-container" style="border:0px; padding-left: 32px;">
+            <div id="responseContainer"></div>
+            <div id="inputLine" class="fixed bottom-6 p-2 mb-2">
+                <button onclick="handleFileButtonClick()" id="uploadButton">
+                    <img src="pin_black.png" style="max-width: 80%; max-height: 80%;" />
+                </button>
+                <form id="chatForm" onsubmit="submitMessage(event)">
+                    <input
+                        id="messageInput"
+                        type="text"
+                        placeholder="Type your message here"
+                        style="outline: none; border: none; width: 445px; height: 50px; font-size:20px; overflow: auto; resize: none;
+                        max-height: 100px;"
+                    />
+                </form>
+            </div>
+            
+            
+            <div id="chatMessages" class="chat-messages" style="margin-right: 32px; margin-top: 18px; border: 0px; height:730px;"></div>
+            
+            <div id="loadingIndicator" class="loading" style="display: none; height:53px">Loading...</div>
+        
+            
+            <input type="file" id="fileInput" accept=".txt" charset="UTF-8" style="display:none;"/>
+            
+            <button style="left: 560px; height: 50px; width: 50px; font-size: 19px; padding:0px; margin-bottom: 14px" class="fixed bottom-6 p-2 mb-2 text-purple rounded border-none bold-text" onclick="refreshIframe()" id="refreshButton"><img src="refresh.png" style="max-width: 80%; max-height: 80%; padding: 4px" alt=""></button>
+        </div>
+        <div class="iframe-container" style="border-left: 1px solid rgb(213, 213, 213); border-top: 0px;">
+            <iframe id="quartz" src="http://localhost:8080/user/" title="Right Frame" style="width: 1300px"></iframe>
+        </div>
+    </div>
+    
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-korean">Loading...</div>
+    </div>
+    
+    
+    <script> 
+        function openQuartzTab() {
+            // Open a new tab with the specified URL
+            window.open('http://localhost:8080/user/', '_blank');
+        }
+        function handleFileButtonClick(){
+            document.getElementById('fileInput').click();
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            
+            const fileInput = document.getElementById('fileInput');
+        
+            fileInput.addEventListener('change', function(event) {
+                const file = event.target.files[0]; 
+        
+                if (file) {
+                    const formData = new FormData();
+                    formData.append('file', file);
+        
+                    fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('responseContainer').innerText = data.response;
+                    })
+                    .catch(error => console.error('Error:', error));
+                }
+            });
+        });
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+    
+        // Function to hide the loading window
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+        
+        // Function to handle iframe load
+        function iframeLoaded() {
+            hideLoading();
+        }
+
+        // AJAX request to check when the iframe has finished loading
+        document.getElementById('quartz').addEventListener('load', iframeLoaded);
+        showLoading(); // Show loading window initially
+
+        const inputElement = document.getElementById('messageInput');
+
+        inputElement.addEventListener('keydown', function (event) {
+            if (event.shiftKey && event.key === 'Enter') {
+                // Add a line (newline character) to the input's value
+                inputElement.value += '\n';
+                // Prevent the default behavior (e.g., adding a newline in the input)
+                event.preventDefault();
+            }
+        });
+
+    </script>
+
+    <script src="script.js"></script>
+    <script src="assistant.js"></script>
+</body>
+</html>

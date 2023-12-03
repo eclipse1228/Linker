@@ -73,7 +73,7 @@ export const BuildArgv = {
   },
   baseDir: {
     string: true,
-    default: "",
+    default: "/user",
     describe: "base path to serve your local server on",
   },
   port: {

@@ -1,7 +1,5 @@
-# Welcom DevDay 2023 ! 
 # Linker
-Project Name: Linker Knowledg-graph converter.
-and 
+Linker is a Knowledge-graph converter. Visualize users' learning materials in the form of knowledge graphs and learning-friendly blogs.
 # 실행방법
 ```
 npm start

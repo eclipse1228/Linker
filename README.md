@@ -1,5 +1,7 @@
-# Linker
-Linker is a Knowledge-graph converter. Visualize users' learning materials in the form of knowledge graphs and learning-friendly blogs.
+# Linker is a learning assistant AI tool. 
+Linker have Knowledge-graph converter. Visualize your' learning materials in form of knowledge graphs and also for learning-friendly blogs.
+Try and maximize your Learning! 
+
 # How to start
 ```
 npm start

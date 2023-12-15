@@ -18,9 +18,9 @@ Type your OpenAi's API-KEY in server.cjs , upload/script.js
 ![026](https://github.com/eclipse1228/Linker/assets/107296751/f0c183b5-5f93-4080-a6b3-3bdcd4f1f2db)
 
 # Team
-eclipse1228
-Dayy9984
-Jelly1500
+@eclipse1228 
+@Dayy9984
+@Jelly1500
 
 
 ## Thank you! 

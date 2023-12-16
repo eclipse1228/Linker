@@ -1,6 +1,6 @@
 # Linker is a learning assistant AI tool. 
 Linker have Knowledge-graph converter. Visualize your' learning materials in form of knowledge graphs and also for learning-friendly blogs.
-Try and maximize your Learning! 
+Upload your FIle and maximize your Learning process! 
 
 # How to start
 ```

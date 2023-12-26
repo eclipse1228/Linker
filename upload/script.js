@@ -1,4 +1,4 @@
-// File upload
+// 파일 업로드 하는 함수
 document.getElementById('uploadButton').addEventListener('click', function() {
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
@@ -6,7 +6,7 @@ document.getElementById('uploadButton').addEventListener('click', function() {
     if (file) {
         const formData = new FormData();
         formData.append('file', file);
-
+        // api와 통신해서 응답을 받기
         fetch('/upload', {
             method: 'POST',
             body: formData
@@ -19,7 +19,7 @@ document.getElementById('uploadButton').addEventListener('click', function() {
     }
 });
 
-// MessageSubmit
+// 
 async function submitMessage(event) {
     event.preventDefault();
     const userMessage = document.getElementById('messageInput').value;
@@ -31,25 +31,26 @@ async function submitMessage(event) {
     // Get and display the response from the assistant
     // await getResponseFromAssistant(userMessage,);
     try {
-                const response = await fetch('/sendToAssistant', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ message: userMessage })
-                });
-                const data = await response.json();
+        // api와 통신해서 응답을 받기
+        const response = await fetch('/sendToAssistant', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ message: userMessage })
+        });
+        const data = await response.json();
         
-                loadingDiv.remove(); // loading remove
+        loadingDiv.remove(); // loading remove
         
-                // Display the assistant's response
-                displayMessage('assistant', data.assistantMessage.content);
-            } catch (error) {
-                console.error('Error:', error);
-                loadingDiv.remove(); // Remove loading indicator
-                // Handle the error appropriately
-            }
+        // Display the assistant's response
+        displayMessage('assistant', data.assistantMessage.content);
+    } catch (error) {
+        console.error('Error:', error);
+        loadingDiv.remove(); // Remove loading indicator
+        // Handle the error appropriately
+    }
 }
 
-
+// api로부터 응답을 받고 그걸 웹뷰에 보이게 하는 함수
 async function getResponseFromAssistant(message) {
     try {
         const response = await fetch('/sendToAssistant', {

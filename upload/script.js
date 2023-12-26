@@ -1,3 +1,4 @@
+// File upload
 document.getElementById('uploadButton').addEventListener('click', function() {
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
@@ -18,6 +19,7 @@ document.getElementById('uploadButton').addEventListener('click', function() {
     }
 });
 
+// MessageSubmit
 async function submitMessage(event) {
     event.preventDefault();
     const userMessage = document.getElementById('messageInput').value;
@@ -36,7 +38,7 @@ async function submitMessage(event) {
                 });
                 const data = await response.json();
         
-                loadingDiv.remove(); // 로딩중 없애기 
+                loadingDiv.remove(); // loading remove
         
                 // Display the assistant's response
                 displayMessage('assistant', data.assistantMessage.content);
@@ -57,7 +59,7 @@ async function getResponseFromAssistant(message) {
         });
         const data = await response.json();
 
-        loadingDiv.remove(); // 로딩중 없애기 
+        loadingDiv.remove(); // loading remove
 
         // Display the assistant's response
         displayMessage('assistant', data.assistantMessage.content);
@@ -68,16 +70,15 @@ async function getResponseFromAssistant(message) {
     }
 }
 
-
     function displayMessage(role, content) {
         const chatMessages = document.getElementById('chatMessages');
         const messageDiv = document.createElement('div');
         messageDiv.className = "whitespace-pre-wrap";
-        messageDiv.style.color = role === 'user' ? 'black' : 'purple';
-        messageDiv.innerHTML = `<strong>${role}:</strong> ${content}<br /><br />`;
+        messageDiv.style.color = role === 'user' ? 'black' : 'purple'; // color 
+        messageDiv.innerHTML = `<strong>${role}:</strong> ${content}<br /><br />`; // innerHTML Insert
         chatMessages.appendChild(messageDiv); // Add new message at the bottom
     }
-    // along at the bottom ?? 
+    
     function addLoadingMessage() { 
         const chatMessages = document.getElementById('chatMessages');
         const loadingDiv = document.createElement('div');

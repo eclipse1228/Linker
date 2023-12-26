@@ -19,7 +19,9 @@
     
     <div class="container">
         <div class="iframe-container" style="border:0px; padding-left: 32px;">
+            <!-- 응답한 내용 적는 구역 -->
             <div id="responseContainer"></div>
+            <!-- 사용자의 질문 입력 및 파일 업로드 창 -->
             <div id="inputLine" class="fixed bottom-6 p-2 mb-2">
                 <button onclick="handleFileButtonClick()" id="uploadButton">
                     <img src="pin_black.png" style="max-width: 80%; max-height: 80%;" />
@@ -45,11 +47,13 @@
             
             <button style="left: 560px; height: 50px; width: 50px; font-size: 19px; padding:0px; margin-bottom: 14px" class="fixed bottom-6 p-2 mb-2 text-purple rounded border-none bold-text" onclick="refreshIframe()" id="refreshButton"><img src="refresh.png" style="max-width: 80%; max-height: 80%; padding: 4px" alt=""></button>
         </div>
+        <!-- localhost:8080에 있는 quartz 뷰를 iframe으로 가져오기 -->
         <div class="iframe-container" style="border-left: 1px solid rgb(213, 213, 213); border-top: 0px;">
             <iframe id="quartz" src="http://localhost:8080/user/" title="Right Frame" style="width: 1300px"></iframe>
         </div>
     </div>
-    
+
+    <!-- api에 파일 업로드하면 전처리된 파일을 받아서 새로운 뷰를 보여줄 때까지 띄울 로딩창 -->
     <div id="loading" class="loading-overlay">
         <div class="loading-spinner"></div>
         <div class="loading-korean">Loading...</div>
@@ -65,13 +69,11 @@
             document.getElementById('fileInput').click();
         }
         document.addEventListener('DOMContentLoaded', function() {
-            
-            
             const fileInput = document.getElementById('fileInput');
         
             fileInput.addEventListener('change', function(event) {
                 const file = event.target.files[0]; 
-        
+                // 파일인지 확인하고, 파일이 맞다면 파일을 api에 전송하고 그 응답을 기다림
                 if (file) {
                     const formData = new FormData();
                     formData.append('file', file);
@@ -107,7 +109,7 @@
         showLoading(); // Show loading window initially
 
         const inputElement = document.getElementById('messageInput');
-
+        // 입력 도중, shift+Enter 키를 누르면 질문을 제출하는 대신 줄바꿈 
         inputElement.addEventListener('keydown', function (event) {
             if (event.shiftKey && event.key === 'Enter') {
                 // Add a line (newline character) to the input's value

@@ -7,7 +7,7 @@ const fsPromises = require("fs").promises;
 
 const app = express();
 const upload = multer({ dest: './content/' });
-const openai = new OpenAI({ apiKey: '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' }); // API 키 입력
+const openai = new OpenAI({ apiKey: '' }); // API 키 입력
 
 app.use(express.static('upload')); // 정적 파일 제공
 app.use(express.json());
